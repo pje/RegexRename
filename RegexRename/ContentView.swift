@@ -29,14 +29,14 @@ struct ContentView: View {
     try? NSRegularExpression(pattern: regex)
   }
 
-  private static func renameFile(_ filePathFrom: String, _ filePathTo: String) -> Result<Void, Error> {
+  private static func RegexRenameFile(_ filePathFrom: String, _ filePathTo: String) -> Result<Void, Error> {
     return Result { try FileManager.default.moveItem(atPath: filePathFrom, toPath: filePathTo) }
   }
 
-  private func doRename(_ files: [URL], _ regex: NSRegularExpression, _ replacePattern: String) -> Void {
+  private func doRegexRename(_ files: [URL], _ regex: NSRegularExpression, _ replacePattern: String) -> Void {
     files.forEach { (file) in
       let (from, to) = (file.absoluteString, file.absoluteString.replace(regex, replacePattern))
-      let result = ContentView.renameFile(from, to)
+      let result = ContentView.RegexRenameFile(from, to)
 
       switch result {
         case .success(_):
@@ -50,8 +50,8 @@ struct ContentView: View {
     return;
   }
 
-  private func doRename(_ files: URL..., regex: NSRegularExpression, replace: String) -> Void {
-    doRename(files, regex, replace)
+  private func doRegexRename(_ files: URL..., regex: NSRegularExpression, replace: String) -> Void {
+    doRegexRename(files, regex, replace)
   }
 
   var body: some View {
@@ -104,7 +104,7 @@ struct ContentView: View {
       "Replace",
       action: {
         compiledFindRegex.map { re in
-          doRename(files, re, replacePattern)
+          doRegexRename(files, re, replacePattern)
           close()
         }
       }

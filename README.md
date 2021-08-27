@@ -1,1 +1,1 @@
-Like `File -> Rename` in MacOS Finder, but with regex support.
+Like `File -> RegexRename` in MacOS Finder, but with regex support.

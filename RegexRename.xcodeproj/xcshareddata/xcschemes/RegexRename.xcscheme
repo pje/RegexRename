@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3E75F5BE26D2C38C0032CAA4"
-               BuildableName = "rename.app"
-               BlueprintName = "rename"
-               ReferencedContainer = "container:rename.xcodeproj">
+               BuildableName = "RegexRename.app"
+               BlueprintName = "RegexRename"
+               ReferencedContainer = "container:RegexRename.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E75F5BE26D2C38C0032CAA4"
-            BuildableName = "rename.app"
-            BlueprintName = "rename"
-            ReferencedContainer = "container:rename.xcodeproj">
+            BuildableName = "RegexRename.app"
+            BlueprintName = "RegexRename"
+            ReferencedContainer = "container:RegexRename.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -108,9 +108,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E75F5BE26D2C38C0032CAA4"
-            BuildableName = "rename.app"
-            BlueprintName = "rename"
-            ReferencedContainer = "container:rename.xcodeproj">
+            BuildableName = "RegexRename.app"
+            BlueprintName = "RegexRename"
+            ReferencedContainer = "container:RegexRename.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

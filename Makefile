@@ -1,4 +1,4 @@
-PRODUCT_NAME=rename
+PRODUCT_NAME=RegexRename
 APP_BUILD_DIR=$(PWD)/build/UninstalledProducts
 APP_INSTALL_DIR=/Applications
 BUILD_TYPE=Deployment
@@ -6,8 +6,8 @@ BUILD_TYPE=Deployment
 build:
 	xcodebuild \
 		CONFIGURATION_BUILD_DIR=$(APP_BUILD_DIR) \
-		-project rename.xcodeproj \
-		-target rename \
+		-project RegexRename.xcodeproj \
+		-target RegexRename \
 		-configuration ${BUILD_TYPE} build
 
 clean:

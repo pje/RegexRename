@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct renameApp: App {
+struct RegexRenameApp: App {
   @State var args: ProgramArgs = ProgramArgs.parseFromCommandLine()
 
   var body: some Scene {
