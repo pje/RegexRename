@@ -1,28 +1,28 @@
-import Foundation
-import SwiftUI
-import OSAKit
 import AppKit
+import Foundation
+import OSAKit
+import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-  func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-    return true
+  func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
+    true
   }
 }
 
 struct ContentView: View {
   @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-  var fileManager: FileManager = FileManager.default
-  var files: [URL] = [ URL(fileURLWithPath: "") ]
+  var fileManager = FileManager.default
+  var files: [URL] = [URL(fileURLWithPath: "")]
   @State var findPattern: String = ""
   @State var replacePattern: String = ""
   @State var compiledFindRegex: NSRegularExpression? = nil
   @State var findPatternIsValid: Bool = true
   @State var isEditing: Bool = false
 
-  private func validateFindPattern() -> Void {
-    self.compiledFindRegex = ContentView.tryCompileRegex(findPattern)
-    self.findPatternIsValid = (compiledFindRegex != nil)
+  private func validateFindPattern() {
+    compiledFindRegex = ContentView.tryCompileRegex(findPattern)
+    findPatternIsValid = (compiledFindRegex != nil)
   }
 
   static func tryCompileRegex(_ regex: String) -> NSRegularExpression? {
@@ -30,27 +30,25 @@ struct ContentView: View {
   }
 
   private static func RegexRenameFile(_ filePathFrom: String, _ filePathTo: String) -> Result<Void, Error> {
-    return Result { try FileManager.default.moveItem(atPath: filePathFrom, toPath: filePathTo) }
+    Result { try FileManager.default.moveItem(atPath: filePathFrom, toPath: filePathTo) }
   }
 
-  private func doRegexRename(_ files: [URL], _ regex: NSRegularExpression, _ replacePattern: String) -> Void {
-    files.forEach { (file) in
+  private func doRegexRename(_ files: [URL], _ regex: NSRegularExpression, _ replacePattern: String) {
+    files.forEach { file in
       let (from, to) = (file.absoluteString, file.absoluteString.replace(regex, replacePattern))
       let result = ContentView.RegexRenameFile(from, to)
 
       switch result {
-        case .success(_):
-          return;
-        case .failure(let e):
-          print("error moving file: \"\(from)\" to \"\(to)\" ::: \(e)");
-          return;
+      case .success:
+        return;
+      case let .failure(e):
+        print("error moving file: \"\(from)\" to \"\(to)\" ::: \(e)")
+        return
       }
     }
-
-    return;
   }
 
-  private func doRegexRename(_ files: URL..., regex: NSRegularExpression, replace: String) -> Void {
+  private func doRegexRename(_ files: URL..., regex: NSRegularExpression, replace: String) {
     doRegexRename(files, regex, replace)
   }
 
@@ -91,7 +89,7 @@ struct ContentView: View {
       text: $findPattern,
       onCommit: { validateFindPattern() }
     )
-    .onChange(of: findPattern, perform: { s in validateFindPattern() })
+    .onChange(of: findPattern, perform: { _ in validateFindPattern() })
     .disableAutocorrection(true)
 
     let replaceField = TextField(
@@ -145,7 +143,7 @@ struct ContentView: View {
     .onExitCommand(perform: close)
   }
 
-  private func close() -> Void {
+  private func close() {
     NSApplication.shared.windows.forEach { window in
       window.close()
     }

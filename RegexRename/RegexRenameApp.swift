@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct RegexRenameApp: App {
-  @State var args: ProgramArgs = ProgramArgs.parseFromCommandLine()
+  @State var args = ProgramArgs.parseFromCommandLine()
 
   var body: some Scene {
     WindowGroup {
