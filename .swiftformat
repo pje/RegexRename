@@ -1,0 +1,3 @@
+# Run swiftformat --help to see the available options
+--commas always
+--indent 2
