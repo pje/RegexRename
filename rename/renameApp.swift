@@ -1,17 +1,26 @@
-//
-//  renameApp.swift
-//  rename
-//
-//  Created by Patrick Ellis on 8/22/21.
-//
-
 import SwiftUI
 
 @main
 struct renameApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @State var args: ProgramArgs = ProgramArgs.parseFromCommandLine()
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView(
+        files: args.files
+      )
+      .onReceive(NotificationCenter.default.publisher(for: NSApplication.willUpdateNotification), perform: hideWindowButtons)
     }
+    .windowStyle(HiddenTitleBarWindowStyle())
+    .windowToolbarStyle(DefaultWindowToolbarStyle())
+  }
+
+  private func hideWindowButtons(_ _: Any?) {
+    for window in NSApplication.shared.windows {
+      window.standardWindowButton(NSWindow.ButtonType.zoomButton)!.isHidden = true
+      window.standardWindowButton(NSWindow.ButtonType.miniaturizeButton)!.isHidden = true
+      window.standardWindowButton(NSWindow.ButtonType.closeButton)!.isHidden = true
+      window.titlebarAppearsTransparent = true
+    }
+  }
 }
