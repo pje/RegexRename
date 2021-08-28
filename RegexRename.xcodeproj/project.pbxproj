@@ -12,9 +12,20 @@
 		3E75F5C726D2C38D0032CAA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E75F5C626D2C38D0032CAA4 /* Assets.xcassets */; };
 		3E75F5CA26D2C38D0032CAA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E75F5C926D2C38D0032CAA4 /* Preview Assets.xcassets */; };
 		3E76CE8626D95EAA009BACE2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CE8526D95EAA009BACE2 /* String.swift */; };
-		3EA8FAF926D94FC900396F43 /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8FAF826D94FC900396F43 /* StringTest.swift */; };
+		3E76CEAF26D96952009BACE2 /* RegexRenameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76CEAE26D96952009BACE2 /* RegexRenameTests.swift */; };
+		3E76CEB626D9696E009BACE2 /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8FAF826D94FC900396F43 /* StringTest.swift */; };
 		3EBD519226D3546C0036ECB3 /* ProgramArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD519126D3546C0036ECB3 /* ProgramArgs.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E76CEB126D96952009BACE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E75F5B726D2C38C0032CAA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E75F5BE26D2C38C0032CAA4;
+			remoteInfo = RegexRename;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E75F5BF26D2C38D0032CAA4 /* RegexRename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegexRename.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,12 +36,23 @@
 		3E75F5CB26D2C38D0032CAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E75F5CC26D2C38D0032CAA4 /* RegexRename.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RegexRename.entitlements; sourceTree = "<group>"; };
 		3E76CE8526D95EAA009BACE2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3E76CE9726D9689C009BACE2 /* RegexRename copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RegexRename copy-Info.plist"; path = "/Users/pje/RegexRename/RegexRename copy-Info.plist"; sourceTree = "<absolute>"; };
+		3E76CEAC26D96952009BACE2 /* RegexRenameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexRenameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E76CEAE26D96952009BACE2 /* RegexRenameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexRenameTests.swift; sourceTree = "<group>"; };
+		3E76CEB026D96952009BACE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA8FAF826D94FC900396F43 /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		3EBD519126D3546C0036ECB3 /* ProgramArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramArgs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3E75F5BC26D2C38C0032CAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E76CEA926D96952009BACE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,7 +67,9 @@
 			children = (
 				3EBD519126D3546C0036ECB3 /* ProgramArgs.swift */,
 				3E75F5C126D2C38D0032CAA4 /* RegexRename */,
+				3E76CEAD26D96952009BACE2 /* RegexRenameTests */,
 				3E75F5C026D2C38D0032CAA4 /* Products */,
+				3E76CE9726D9689C009BACE2 /* RegexRename copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3E75F5BF26D2C38D0032CAA4 /* RegexRename.app */,
+				3E76CEAC26D96952009BACE2 /* RegexRenameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,7 +85,6 @@
 		3E75F5C126D2C38D0032CAA4 /* RegexRename */ = {
 			isa = PBXGroup;
 			children = (
-				3EA8FAF826D94FC900396F43 /* StringTest.swift */,
 				3E76CE8526D95EAA009BACE2 /* String.swift */,
 				3E75F5C226D2C38D0032CAA4 /* RegexRenameApp.swift */,
 				3E75F5C426D2C38D0032CAA4 /* ContentView.swift */,
@@ -78,6 +102,16 @@
 				3E75F5C926D2C38D0032CAA4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E76CEAD26D96952009BACE2 /* RegexRenameTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EA8FAF826D94FC900396F43 /* StringTest.swift */,
+				3E76CEAE26D96952009BACE2 /* RegexRenameTests.swift */,
+				3E76CEB026D96952009BACE2 /* Info.plist */,
+			);
+			path = RegexRenameTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +134,24 @@
 			productReference = 3E75F5BF26D2C38D0032CAA4 /* RegexRename.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3E76CEAB26D96952009BACE2 /* RegexRenameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E76CEB326D96952009BACE2 /* Build configuration list for PBXNativeTarget "RegexRenameTests" */;
+			buildPhases = (
+				3E76CEA826D96952009BACE2 /* Sources */,
+				3E76CEA926D96952009BACE2 /* Frameworks */,
+				3E76CEAA26D96952009BACE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E76CEB226D96952009BACE2 /* PBXTargetDependency */,
+			);
+			name = RegexRenameTests;
+			productName = RegexRenameTests;
+			productReference = 3E76CEAC26D96952009BACE2 /* RegexRenameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +163,10 @@
 				TargetAttributes = {
 					3E75F5BE26D2C38C0032CAA4 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					3E76CEAB26D96952009BACE2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3E75F5BE26D2C38C0032CAA4;
 					};
 				};
 			};
@@ -128,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				3E75F5BE26D2C38C0032CAA4 /* RegexRename */,
+				3E76CEAB26D96952009BACE2 /* RegexRenameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +199,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E76CEAA26D96952009BACE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -153,11 +217,27 @@
 				3E75F5C326D2C38D0032CAA4 /* RegexRenameApp.swift in Sources */,
 				3E76CE8626D95EAA009BACE2 /* String.swift in Sources */,
 				3EBD519226D3546C0036ECB3 /* ProgramArgs.swift in Sources */,
-				3EA8FAF926D94FC900396F43 /* StringTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E76CEA826D96952009BACE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E76CEB626D9696E009BACE2 /* StringTest.swift in Sources */,
+				3E76CEAF26D96952009BACE2 /* RegexRenameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E76CEB226D96952009BACE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E75F5BE26D2C38C0032CAA4 /* RegexRename */;
+			targetProxy = 3E76CEB126D96952009BACE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3E75F5CD26D2C38D0032CAA4 /* Debug */ = {
@@ -293,6 +373,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pje.RegexRename;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -319,9 +400,48 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = pje.RegexRename;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3E76CEB426D96952009BACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RegexRenameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pje.RegexRenameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegexRename.app/Contents/MacOS/RegexRename";
+			};
+			name = Debug;
+		};
+		3E76CEB526D96952009BACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RegexRenameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pje.RegexRenameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegexRename.app/Contents/MacOS/RegexRename";
 			};
 			name = Release;
 		};
@@ -342,6 +462,15 @@
 			buildConfigurations = (
 				3E75F5D026D2C38D0032CAA4 /* Debug */,
 				3E75F5D126D2C38D0032CAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E76CEB326D96952009BACE2 /* Build configuration list for PBXNativeTarget "RegexRenameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E76CEB426D96952009BACE2 /* Debug */,
+				3E76CEB526D96952009BACE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

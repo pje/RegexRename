@@ -26,6 +26,7 @@ format:
 	swiftformat *.swift
 
 test:
-	xcrun swift -F $(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/Library/Frameworks/ $(PRODUCT_NAME)/StringTest.swift
+	xcodebuild -project RegexRename.xcodeproj -scheme RegexRename test | xcbeautify
+xcrun swift -F $(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/Library/Frameworks/ $(PRODUCT_NAME)/StringTest.swift
 
 .PHONY: build clean install
